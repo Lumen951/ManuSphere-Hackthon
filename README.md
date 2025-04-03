@@ -1,176 +1,96 @@
-<p align="center">
-  <img src="assets/logo.jpg" width="200"/>
-</p>
+# ManuSphere 的 Hackathon 作品！
 
-English | [中文](README_zh.md) | [한국어](README_ko.md) | [日本語](README_ja.md)
+## 队伍介绍
 
-[![GitHub stars](https://img.shields.io/github/stars/mannaandpoem/OpenManus?style=social)](https://github.com/mannaandpoem/OpenManus/stargazers)
-&ensp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &ensp;
-[![Discord Follow](https://dcbadge.vercel.app/api/server/DYn29wFk9z?style=flat)](https://discord.gg/DYn29wFk9z)
+来自北大，人大高瓴，北理的大一&大二同学共同开发的 OpenManus tool
 
-# 👋 OpenManus
+为开源，为 AGI，为共同的极客精神！
 
-Manus is incredible, but OpenManus can achieve any idea without an *Invite Code* 🛫!
+## 3 天开发成果
 
-Our team members [@Xinbin Liang](https://github.com/mannaandpoem) and [@Jinyu Xiang](https://github.com/XiangJinyu) (core authors), along with [@Zhaoyang Yu](https://github.com/MoshiQAQ), [@Jiayi Zhang](https://github.com/didiforgithub), and [@Sirui Hong](https://github.com/stellaHSR), we are from [@MetaGPT](https://github.com/geekan/MetaGPT). The prototype is launched within 3 hours and we are keeping building!
+### 卡片生成工具 md2card
 
-It's a simple implementation, so we welcome any suggestions, contributions, and feedback!
+测试语句：为我生成一张大奖章基金的波普风格卡片，保存在本地
 
-Enjoy your own agent with OpenManus!
+生成结果：
 
-We're also excited to introduce [OpenManus-RL](https://github.com/OpenManus/OpenManus-RL), an open-source project dedicated to reinforcement learning (RL)- based (such as GRPO) tuning methods for LLM agents, developed collaboratively by researchers from UIUC and OpenManus.
+![大奖章基金波普风格卡片](./workspace/1743692028342_8321kq.png)
 
-## Project Demo
+对比过去单纯使用 python_execute 工具生成的卡片：
 
-<video src="https://private-user-images.githubusercontent.com/61239030/420168772-6dcfd0d2-9142-45d9-b74e-d10aa75073c6.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEzMTgwNTksIm5iZiI6MTc0MTMxNzc1OSwicGF0aCI6Ii82MTIzOTAzMC80MjAxNjg3NzItNmRjZmQwZDItOTE0Mi00NWQ5LWI3NGUtZDEwYWE3NTA3M2M2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA3VDAzMjIzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdiZjFkNjlmYWNjMmEzOTliM2Y3M2VlYjgyNDRlZDJmOWE3NWZhZjE1MzhiZWY4YmQ3NjdkNTYwYTU5ZDA2MzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UuHQCgWYkh0OQq9qsUWqGsUbhG3i9jcZDAMeHjLt5T4" data-canonical-src="https://private-user-images.githubusercontent.com/61239030/420168772-6dcfd0d2-9142-45d9-b74e-d10aa75073c6.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEzMTgwNTksIm5iZiI6MTc0MTMxNzc1OSwicGF0aCI6Ii82MTIzOTAzMC80MjAxNjg3NzItNmRjZmQwZDItOTE0Mi00NWQ5LWI3NGUtZDEwYWE3NTA3M2M2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA3VDAzMjIzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdiZjFkNjlmYWNjMmEzOTliM2Y3M2VlYjgyNDRlZDJmOWE3NWZhZjE1MzhiZWY4YmQ3NjdkNTYwYTU5ZDA2MzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UuHQCgWYkh0OQq9qsUWqGsUbhG3i9jcZDAMeHjLt5T4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px"></video>
+![不知生成的什么东西](./workspace\48738d5447c9cac015145d2d904b2cc.png)
 
-## Installation
+生成全过程，一共调用 8 次便可以生成精美卡片：
 
-We provide two installation methods. Method 2 (using uv) is recommended for faster installation and better dependency management.
+![OpenManus生成效果演示](./workspace\OpenManus生成效果演示-卡片生成.mp4)
 
-### Method 1: Using conda
+#### 功能特点
 
-1. Create a new conda environment:
+- 支持十余种种卡片风格：波普风格、苹果备忘录风格、小红书风格
+- 自动下载并保存生成的图片
+- 简单易用的命令行和 Web 界面
+- 自动根据初始提示词撰写 Markdown 文档
+- 支持 Markdown 格式转换为精美卡片
 
-```bash
-conda create -n open_manus python=3.12
-conda activate open_manus
+#### ToDo
+
+- 添加更多样式
+- 在 Web 前端中允许显示生成卡片
+
+### 精准调用工具执行优化
+
+痛点：生成卡片过程中经常出现调用 Web，试图使用 Canvas 等网站制作卡片的情况
+
+解决方案:添加 tool_guide 工具，根据关键词检索调用最符合工具执行任务
+
+```python
+    search_keywords = ["搜索", "查找", "了解", "信息", "寻找", "search", "find", "look up"]
+    browser_keywords = ["网站", "网页", "浏览", "访问", "网址", "url", "website", "browser"]
+    code_keywords = ["代码", "编程", "运行", "执行", "计算", "code", "program", "execute", "calculate"]
+    file_keywords = ["文件", "保存", "读取", "表格", "file", "save", "read", "excel"]
+    card_keywords = ["卡片", "生成", "创建", "card", "generate", "create","md2card","图片","图片生成","风格"]
+    time_keywords = ["时间", "日期", "年份", "月份", "日历", "农历", "黄历", "calendar", "time", "date", "year", "month", "day"]
+    weather_keywords = ["天气", "温度", "湿度", "风力", "风向", "天气预报", "weather", "temperature", "humidity", "wind", "wind direction", "weather forecast"]
+
+    suggested_tools = []
+
+    if any(kw in message.lower() for kw in search_keywords):
+        suggested_tools.append("web_search")
+
+    if any(kw in message.lower() for kw in browser_keywords):
+        suggested_tools.append("browser_use")
+
+    if any(kw in message.lower() for kw in code_keywords):
+        suggested_tools.append("python_execute")
+
+    if any(kw in message.lower() for kw in file_keywords):
+        suggested_tools.append("python_execute")
+
+    if any(kw in message.lower() for kw in card_keywords):
+        suggested_tools.append("md2card")
+
+    if any(kw in message.lower() for kw in time_keywords):
+        suggested_tools.append("calendar")
+
+    if any(kw in message.lower() for kw in weather_keywords):
+        suggested_tools.append("weather")
+
 ```
 
-2. Clone the repository:
+### 天气&日期工具
 
-```bash
-git clone https://github.com/mannaandpoem/OpenManus.git
-cd OpenManus
-```
+痛点：在使用过程中经常发现调用假日期，假天气，假地点
 
-3. Install dependencies:
+解决方案：接入专门 API，用于提供精确的日期、天气和地点
 
-```bash
-pip install -r requirements.txt
-```
+代码位置：tool 文件夹中的 time, weather, place 工具
 
-### Method 2: Using uv (Recommended)
+## 感谢
 
-1. Install uv (A fast Python package installer and resolver):
+感谢 OpenManus 团队组织本次黑客松，是 OpenManus 的开源才有我们得以发挥的空间
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+感谢我的两名队友，他们在开发过程中提供了宝贵的建议以及不可或缺的帮助
 
-2. Clone the repository:
+我们深知技术有限，尚有很大提升空间，但依然希望能尽微薄之力帮助完善 OpenManus
 
-```bash
-git clone https://github.com/mannaandpoem/OpenManus.git
-cd OpenManus
-```
-
-3. Create a new virtual environment and activate it:
-
-```bash
-uv venv --python 3.12
-source .venv/bin/activate  # On Unix/macOS
-# Or on Windows:
-# .venv\Scripts\activate
-```
-
-4. Install dependencies:
-
-```bash
-uv pip install -r requirements.txt
-```
-
-### Browser Automation Tool (Optional)
-```bash
-playwright install
-```
-
-## Configuration
-
-OpenManus requires configuration for the LLM APIs it uses. Follow these steps to set up your configuration:
-
-1. Create a `config.toml` file in the `config` directory (you can copy from the example):
-
-```bash
-cp config/config.example.toml config/config.toml
-```
-
-2. Edit `config/config.toml` to add your API keys and customize settings:
-
-```toml
-# Global LLM configuration
-[llm]
-model = "gpt-4o"
-base_url = "https://api.openai.com/v1"
-api_key = "sk-..."  # Replace with your actual API key
-max_tokens = 4096
-temperature = 0.0
-
-# Optional configuration for specific LLM models
-[llm.vision]
-model = "gpt-4o"
-base_url = "https://api.openai.com/v1"
-api_key = "sk-..."  # Replace with your actual API key
-```
-
-## Quick Start
-
-One line for run OpenManus:
-
-```bash
-python main.py
-```
-
-Then input your idea via terminal!
-
-For MCP tool version, you can run:
-```bash
-python run_mcp.py
-```
-
-For unstable multi-agent version, you also can run:
-
-```bash
-python run_flow.py
-```
-
-## How to contribute
-
-We welcome any friendly suggestions and helpful contributions! Just create issues or submit pull requests.
-
-Or contact @mannaandpoem via 📧email: mannaandpoem@gmail.com
-
-**Note**: Before submitting a pull request, please use the pre-commit tool to check your changes. Run `pre-commit run --all-files` to execute the checks.
-
-## Community Group
-Join our networking group on Feishu and share your experience with other developers!
-
-<div align="center" style="display: flex; gap: 20px;">
-    <img src="assets/community_group.jpg" alt="OpenManus 交流群" width="300" />
-</div>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mannaandpoem/OpenManus&type=Date)](https://star-history.com/#mannaandpoem/OpenManus&Date)
-
-## Acknowledgement
-
-Thanks to [anthropic-computer-use](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo)
-and [browser-use](https://github.com/browser-use/browser-use) for providing basic support for this project!
-
-Additionally, we are grateful to [AAAJ](https://github.com/metauto-ai/agent-as-a-judge), [MetaGPT](https://github.com/geekan/MetaGPT), [OpenHands](https://github.com/All-Hands-AI/OpenHands) and [SWE-agent](https://github.com/SWE-agent/SWE-agent).
-
-OpenManus is built by contributors from MetaGPT. Huge thanks to this agent community!
-
-## Cite
-```bibtex
-@misc{openmanus2025,
-  author = {Xinbin Liang and Jinyu Xiang and Zhaoyang Yu and Jiayi Zhang and Sirui Hong},
-  title = {OpenManus: An open-source framework for building general AI agents},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/mannaandpoem/OpenManus}},
-}
-```
+未来会继续优化！希望 OpenManus 越做越好，做真正开源的 Manus！

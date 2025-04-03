@@ -78,3 +78,10 @@ class CLIResult(ToolResult):
 
 class ToolFailure(ToolResult):
     """A ToolResult that represents a failure."""
+
+    def __init__(self, error: str = "", **kwargs):
+        super().__init__(error=error, **kwargs)
+
+    async def cleanup(self):
+        """清理资源，确保即使工具失败也能正确关闭相关资源"""
+        pass
